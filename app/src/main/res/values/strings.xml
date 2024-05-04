@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Booble Calculator</string>
+    <string name="backspace">&#x232B;</string>
+    <string name="percent">&#x25;</string>
+    <string name="multi">&#xd7;</string>
+    <string name="div">&#247;</string>
+    <string name="add">&#x2b;</string>
+    <string name="minus">&#x2212;</string>
+    <string name="sign">&#xb1;</string>
+</resources>

@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="bottom"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/editText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.25"
+            android:backgroundTint="@color/grey_light"
+            android:maxLines="3"
+            android:paddingHorizontal="10dp"
+            android:text=""
+            android:textAlignment="viewEnd"
+            android:textColor="@color/grey_light"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:paddingBottom="5dp"
+            android:textSize="45sp"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMaxTextSize="45sp"
+            tools:ignore="HardcodedText,RtlCompat"/>
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:autofillHints=""
+            android:text="0"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/black"
+            android:gravity="right|center_vertical"
+            android:backgroundTint="@color/grey_light"
+            android:inputType="numberDecimal|numberSigned"
+            android:textSize="45sp"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMaxTextSize="45sp"
+            android:cursorVisible="false"
+            android:enabled="false"
+            android:paddingHorizontal="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            tools:ignore="HardcodedText,RtlCompat" />
+
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/gridLayout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@+id/editText"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.60"
+            app:useDefaultMargins="true"
+            app:columnCount="4"
+            app:rowCount="5">
+
+            <Button
+                android:id="@+id/clear"
+                style="@style/CustomButtonStyle"
+                android:fontFamily="@font/montserrat_medium"
+                android:onClick="BtnClick"
+                android:text="C"
+                android:textColor="@color/orange"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/backspace"
+                style="@style/CustomButtonStyle"
+                android:onClick="BtnClick"
+                android:text="@string/backspace"
+                android:textColor="@color/orange"
+                android:autoSizeMaxTextSize="35sp"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1" />
+
+            <Button
+                android:id="@+id/percent"
+                style="@style/CustomButtonStyle"
+                android:onClick="BtnClick"
+                android:text="@string/percent"
+                android:textColor="@color/orange"
+                android:autoSizeMaxTextSize="35sp"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1" />
+
+            <Button
+                android:id="@+id/div"
+                style="@style/CustomButtonStyle"
+                android:onClick="BtnClick"
+                android:text="@string/div"
+                android:textColor="@color/orange"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1" />
+
+            <Button
+                android:id="@+id/button7"
+                style="@style/CustomButtonStyle"
+                android:onClick="BtnClick"
+                android:text="7"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/button8"
+                style="@style/CustomButtonStyle"
+                android:onClick="BtnClick"
+                android:text="8"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/button9"
+                style="@style/CustomButtonStyle"
+                android:onClick="BtnClick"
+                android:text="9"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/multi"
+                style="@style/CustomButtonStyle"
+                android:onClick="BtnClick"
+                android:text="@string/multi"
+                android:textColor="@color/orange"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1" />
+
+            <Button
+                android:id="@+id/button4"
+                style="@style/CustomButtonStyle"
+                android:onClick="BtnClick"
+                android:text="4"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/button5"
+                style="@style/CustomButtonStyle"
+                android:onClick="BtnClick"
+                android:text="5"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/button6"
+                style="@style/CustomButtonStyle"
+                android:onClick="BtnClick"
+                android:text="6"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/minus"
+                style="@style/CustomButtonStyle"
+                android:onClick="BtnClick"
+                android:text="@string/minus"
+                android:textColor="@color/orange"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1" />
+
+            <Button
+                android:id="@+id/button1"
+                style="@style/CustomButtonStyle"
+                android:onClick="BtnClick"
+                android:text="1"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/button2"
+                style="@style/CustomButtonStyle"
+                android:onClick="BtnClick"
+                android:text="2"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/button3"
+                style="@style/CustomButtonStyle"
+                android:onClick="BtnClick"
+                android:text="3"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/add"
+                style="@style/CustomButtonStyle"
+                android:onClick="BtnClick"
+                android:text="@string/add"
+                android:textColor="@color/orange"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1" />
+
+            <Button
+                android:id="@+id/sign"
+                style="@style/CustomButtonStyle"
+                android:onClick="BtnClick"
+                android:text="@string/sign"
+                android:textColor="@color/orange"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1" />
+
+            <Button
+                android:id="@+id/button0"
+                style="@style/CustomButtonStyle"
+                android:onClick="BtnClick"
+                android:text="0"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/dot"
+                style="@style/CustomButtonStyle"
+                android:onClick="BtnClick"
+                android:text=","
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/equal"
+                style="@style/EqualButtonStyle"
+                android:layout_width="0dp"
+                android:onClick="BtnClick"
+                android:paddingBottom="5dp"
+                android:scaleX="0.7"
+                android:scaleY="0.7"
+                android:text="="
+                android:textSize="55sp"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+                tools:ignore="HardcodedText" />
+
+        </androidx.gridlayout.widget.GridLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
