@@ -196,6 +196,9 @@ public class MainActivity extends AppCompatActivity {
         // знак равенства
         if (id == R.id.equal) {
             flag = true;
+            textView.setAutoSizeTextTypeWithDefaults(TextView.AUTO_SIZE_TEXT_TYPE_NONE);
+            textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 45);
+            editText.setAutoSizeTextTypeWithDefaults(TextView.AUTO_SIZE_TEXT_TYPE_NONE);
             editText.setTextSize(TypedValue.COMPLEX_UNIT_SP, 60);
             textView.setTextColor(Color.parseColor("#000000"));
             editText.setTextColor(Color.parseColor("#3C3C3C"));
@@ -227,6 +230,8 @@ public class MainActivity extends AppCompatActivity {
                 // Выводим ошибки
                 error = answer.substring(1);
                 cleanAll();
+                textView.setAutoSizeTextTypeWithDefaults(TextView.AUTO_SIZE_TEXT_TYPE_NONE);
+                textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 30);
                 textView.setTextColor(Color.parseColor("#FF0000"));
                 textView.setText(error);
                 error = "";
@@ -254,7 +259,10 @@ public class MainActivity extends AppCompatActivity {
         result = "";
         example = "";
         answer = "";
+        textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 60);
         editText.setTextSize(TypedValue.COMPLEX_UNIT_SP, 45);
+        editText.setAutoSizeTextTypeUniformWithConfiguration(10, 45, 1, TextView.AUTO_SIZE_TEXT_TYPE_UNIFORM);
+        textView.setAutoSizeTextTypeUniformWithConfiguration(10, 60, 1, TextView.AUTO_SIZE_TEXT_TYPE_UNIFORM);
         textView.setTextColor(Color.parseColor("#3C3C3C"));
         editText.setTextColor(Color.parseColor("#000000"));
     }
