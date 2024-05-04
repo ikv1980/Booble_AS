@@ -232,6 +232,7 @@ public class MainActivity extends AppCompatActivity {
                 cleanAll();
                 textView.setAutoSizeTextTypeWithDefaults(TextView.AUTO_SIZE_TEXT_TYPE_NONE);
                 textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 30);
+                textView.setAutoSizeTextTypeUniformWithConfiguration(10, 30, 1, TextView.AUTO_SIZE_TEXT_TYPE_UNIFORM);
                 textView.setTextColor(Color.parseColor("#FF0000"));
                 textView.setText(error);
                 error = "";
